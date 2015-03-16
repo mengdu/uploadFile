@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>文件上传管理1.0</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+	<script type="text/javascript" src="./js/spark-md5.min.js"></script>
+	<script type="text/javascript">
+
+	</script>
+	<style type="text/css">
+		*{margin:0 auto;}
+		body{
+			background: #EAE8E8;
+			background-image: url(./images/main-back.png);
+		}
+		#header{
+			width:100%;
+			height: 100px;
+			background: -webkit-linear-gradient(#f8f8f8,#f2f2f2);
+			background: -moz-linear-gradient(#f8f8f8,#f2f2f2);
+			background: -ms-linear-gradient(#f8f8f8,#f2f2f2);
+			background: -o-linear-gradient(#f8f8f8,#f2f2f2);
+			background: linear-gradient(#f8f8f8,#f2f2f2);
+			border-bottom:solid 1px #DDDDDD;
+		}
+		#change_file{
+			width:100%;
+			height:100px;
+			background-image: url(./images/back.png);
+			border-bottom:solid 1px #DDDDDD;
+		}
+		#change_file .input_box{
+			width:600px;
+			height:45px;
+			background: #ccc;
+		}
+		#url{
+			outline: none;
+			display: block;
+			width:80%;
+			height:45px;
+			background: #FEFDFD;
+			float: left;
+			line-height: 45px;
+			border:solid 1px #E5E5E5;
+			box-sizing:border-box;
+		}
+		#upload{
+
+		}
+	</style>
+</head>
+<body>
+	<div id="header"></div>
+	<div id="change_file">
+		<div class="input_box">
+			<form action="upload.php" method="post" target="_blank" enctype="multipart/form-data">
+				<input type="hidden" name="MAX_FILE_SIZE" value="209715200" /><!--上传限制-->
+				<input type="file" name="wen[]" multiple="true" id="url" />
+				<input type="submit" name="sub" value="上传" id="upload"/>
+			</form>
+		</div>
+	</div>
+	<div id="file_box"></div>
+	<div id="bottom"></div>
+	<div id="footer"></div>
+</body>
+</html>
